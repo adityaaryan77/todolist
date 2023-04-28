@@ -9,3 +9,7 @@ exports.getDay = () => {
   const options = { weekday: "long" };
   return today.toLocaleDateString("en-US", options);
 };
+
+exports.isDate = (date) => {
+  return new Date(date) !== "Invalid Date" && !isNaN(new Date(date));
+};
